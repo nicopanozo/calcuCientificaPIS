@@ -1,3 +1,4 @@
+from re import A
 from tkinter import Button, Tk, Frame, Entry, END
 
 ventana = Tk()
@@ -54,6 +55,10 @@ def borrar_uno():
 def borrar_todo():
     Resultado.delete(0, END)
 
+
+#def fraccionadecimal():
+
+    
 
 frame = Frame(ventana, bg='black', relief="raised")
 frame.grid(column=0, row=0, padx=6, pady=3)
@@ -168,5 +173,10 @@ Button_Seno = HoverButton(frame, text="Sen", height=2, width=5, font=('Comic sen
                             borderwidth=2, relief="raised", activebackground="red", bg='#FD5603', anchor="center",
                             command=lambda: borrar_todo())
 Button_Seno.grid(column=4, row=5, pady=2, padx=2)
+#fila 5
+Button_SD = HoverButton(frame, text="S->D", height=2, width=5, font=('Comic sens MC', 12, 'bold'),
+                           borderwidth=2, relief="raised", activebackground="#16FD03", bg='#2FEC71', anchor="center",
+                           command=lambda: obtener('/'))
+Button_SD.grid(column=1, row=6, pady=2, padx=2)
 
 ventana.mainloop()
