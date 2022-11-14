@@ -1,9 +1,10 @@
 from tkinter import Button, Tk, Frame, Entry, END
+import math
 
 ventana = Tk()
-ventana.geometry('274x328')
+ventana.geometry('328x328')
 ventana.config(bg="white")
-ventana.iconbitmap(bitmap='icono.ico')
+#ventana.iconbitmap(bitmap='icono.ico')
 ventana.resizable(0, 0)
 ventana.title('Calculadora')
 
@@ -129,10 +130,10 @@ Button_tan = HoverButton(frame, text="Tan", height=2, width=5, font=('Comic sens
                             command=lambda: borrar_todo())
 Button_tan.grid(column=4, row=3, pady=2, padx=2)
 # fila 4
-Button0 = HoverButton(frame, text="0", height=5, width=5, font=('Comic sens MC', 12, 'bold'),
+Button0 = HoverButton(frame, text="0", height=2, width=5, font=('Comic sens MC', 12, 'bold'),
                       borderwidth=2, relief="raised", activebackground="aqua", bg='#999AB8', anchor="center",
                       command=lambda: obtener(0))
-Button0.grid(column=0, rowspan=2, row=4, pady=1, padx=1)
+Button0.grid(column=0, row=4, pady=1, padx=1)
 Button_punto = HoverButton(frame, text=".", height=2, width=5, font=('Comic sens MC', 12, 'bold'),
                            borderwidth=2, relief="raised", activebackground="aqua", bg='#999AB8', anchor="center",
                            command=lambda: obtener('.'))
@@ -150,11 +151,15 @@ Button_Coseno = HoverButton(frame, text="Cos", height=2, width=5, font=('Comic s
                             borderwidth=2, relief="raised", activebackground="red", bg='#FD5603', anchor="center",
                             command=lambda: borrar_todo())
 Button_Coseno.grid(column=4, row=4, pady=2, padx=2)
-# fila 4
+# fila 5
 Button_igual = HoverButton(frame, text="=", height=2, width=5, font=('Comic sens MC', 12, 'bold'),
                            borderwidth=2, relief="raised", activebackground="#16FD03", bg='#2FEC71', anchor="center",
                            command=lambda: operacion())
-Button_igual.grid(column=1, row=5, pady=1, padx=1)
+Button_igual.grid(column=0, row=5, pady=1, padx=1)
+Button_pi = HoverButton(frame, text="π", height=2, width=5, font=('Comic sens MC', 12, 'bold'),
+                           borderwidth=2, relief="raised", activebackground="#FEEF02", bg='#2A16F7', anchor="center",
+                           command=lambda: obtener(math.pi))
+Button_pi.grid(column=1, row=5, pady=1, padx=1)
 Button_raiz = HoverButton(frame, text="√", height=2, width=5, font=('Comic sens MC', 12, 'bold'),
                           borderwidth=2, relief="raised", activebackground="#FEEF02", bg='#2A16F7', anchor="center",
                           command=lambda: obtener('**(1/2)'))
