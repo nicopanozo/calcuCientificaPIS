@@ -1,4 +1,5 @@
 from re import A
+from fractions import Fraction
 from tkinter import Button, Tk, Frame, Entry, END
 
 ventana = Tk()
