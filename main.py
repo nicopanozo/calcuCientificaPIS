@@ -178,6 +178,6 @@ Button_Seno.grid(column=4, row=5, pady=2, padx=2)
 Button_SD = HoverButton(frame, text="S->D", height=2, width=5, font=('Comic sens MC', 12, 'bold'),
                            borderwidth=2, relief="raised", activebackground="#16FD03", bg='#2FEC71', anchor="center",
                            command=lambda: obtener('/'))
-Button_SD.grid(column=1, row=6, pady=2, padx=2)
+Button_SD.grid(column=0, row=6, pady=2, padx=2)
 
 ventana.mainloop()
